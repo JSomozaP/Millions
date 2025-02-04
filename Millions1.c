@@ -23,6 +23,7 @@ int main(){
 
     int Score = 0;
     int reponse;
+    int totalpoints = NB_QUESTIONS * points;
 
     printf("###################################################\n######## Qui veux gagner des millions ?! ########## \n###################################################\n\n\n");
 
@@ -46,30 +47,33 @@ int main(){
         printf("Bien joué !\n\n\n");
         printf("*Le score augmente de %d*\n\n\n",points);
         Score+= points;
+        printf("Score : %d/%d\n\n\n", Score, totalpoints );
     }
     else
     {
         printf("Non !\n\n\n");
         printf("*Le score n'augmente pas :(*\n\n\n");
+        printf("Score : %d/%d\n\n\n", Score, totalpoints );
     }
 }
-
-    printf("###################################################\n");
-    printf("######## Partie Terminée ##########\n");
-    printf("###################################################\n");
-
-    int totalpoints = NB_QUESTIONS * points;
     int pourcentage = (Score * 100) / totalpoints;
 
-    printf("Score total : %d/%d\n", Score, totalpoints );
-    printf("Votre pourcentage de bonnes réponses est : %d%%\n\n", pourcentage);
+
+    printf("#################################\n");
+    printf("Score total : %d/%d\n", Score, totalpoints);
+    printf("#################################\n\n");
+
+    
+    printf("########### Game Over #############\n");
+    
+    printf("Votre pourcentage de bonnes réponses est : %d%%\n\n\n",pourcentage);
 
     if (pourcentage > 50){
-        printf("Bien joué, les millions sont à toi\n");
+        printf("Bien joué, les millions sont à toi\n\n\n");
     }
     else
     {
-        printf("Dommage, tu reste pauvre !\n");
+        printf("Dommage, tu reste pauvre !\n\n\n");
     }
 
     return 0;
