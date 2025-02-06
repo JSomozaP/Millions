@@ -37,25 +37,25 @@ int main(){
         printf("\nQuestion %d\n\n%s",i + 1, questions[i]);
 
     
-    printf("\nVotre réponse est : ");
-    scanf("%d",&reponse);
-    
-    printf("\nSuspennnnnnce !\n\n\n");
-    
-    if (reponse == reponses[i])
-    {
-        printf("Bien joué !\n\n\n");
-        printf("*Le score augmente de %d*\n\n\n",points);
-        Score+= points;
-        printf("Score : %d/%d\n\n\n", Score, totalpoints );
+        printf("\nVotre réponse est : ");
+        scanf("%d",&reponse);
+        
+        printf("\nSuspennnnnnce !\n\n\n");
+        
+        if (reponse == reponses[i])
+        {
+            printf("Bien joué !\n\n\n");
+            printf("*Le score augmente de %d*\n\n\n",points);
+            Score+= points;
+            printf("Score : %d/%d\n\n\n", Score, totalpoints );
+        }
+        else
+        {
+            printf("Non !\n\n\n");
+            printf("*Le score n'augmente pas :(*\n\n\n");
+            printf("Score : %d/%d\n\n\n", Score, totalpoints );
+        }
     }
-    else
-    {
-        printf("Non !\n\n\n");
-        printf("*Le score n'augmente pas :(*\n\n\n");
-        printf("Score : %d/%d\n\n\n", Score, totalpoints );
-    }
-}
     int pourcentage = (Score * 100) / totalpoints;
 
 
